@@ -1,0 +1,19 @@
+{
+  "name": "change-hackathon",
+  "version": "1.0.0",
+  "description": "Mic's Change.org hackathon project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/micnews/change-hackathon.git"
+  },
+  "author": "ryanscottaudio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/micnews/change-hackathon/issues"
+  },
+  "homepage": "https://github.com/micnews/change-hackathon#readme"
+}
