@@ -1,3 +1,7 @@
+.builder {
+  font-family: proxima-nova;
+}
+
 .option-panes {
   width: 100vw;
   margin: auto;
@@ -12,4 +16,9 @@
 
 .generate-iframe {
   cursor: pointer;
+  background: black;
+  color: white;
+  display: block;
+  padding: 5px;
+  width: 152px;
 }

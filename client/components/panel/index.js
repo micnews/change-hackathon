@@ -5,9 +5,14 @@ module.exports = {
   render: ({ props: { panes } }) => {
     return (
       <div class='panel'>
-        {panes.map((pane) => {
-          return <Pane {...pane}/>;
-        })}
+        <div class='panel__panes'>
+          {panes.map((pane) => {
+            return <Pane {...pane}/>;
+          })}
+        </div>
+        <div class='panel__logo'>
+          <div class='panel__logo--image'/>
+        </div>
       </div>
     );
   }

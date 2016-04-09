@@ -20,7 +20,7 @@ module.exports = {
     };
 
     return (
-      <div>
+      <div class='builder'>
         <div class='option-panes'>
           {[0, 1, 2].map((idx) => {
             return (
@@ -44,9 +44,9 @@ module.exports = {
           })}
         </div>
         Here's your embed code:
-        <input class='final-display' value={'<iframe width="750" src="//' + window.location.host + '/?' + serialize(state) + '"/>'}/>
+        <input class='final-display' value={'<iframe style="border-width: 0px !important" width="620" height="320" src="//' + window.location.host + '/?' + serialize(state) + '"/>'}/>
         <div class='generate-iframe' onClick={handleOnGenerate}>See what it'll look like</div>
-        {iframeSrc && <iframe width="750" class='sample-iframe' src={iframeSrc}/>}
+        {iframeSrc && <iframe style='border-width: 0px !important' width='620' height='320' class='sample-iframe' src={iframeSrc}/>}
       </div>
     );
   }

@@ -1,1 +1,46 @@
+@import "./components/pane/index.css";
 
+body {
+  margin: 0;
+}
+
+.panel {
+  width: calc(620px - 30px);
+  height: calc(320px - 30px);
+  padding: 15px;
+  background: #F4F4F4;
+  position: relative;
+}
+
+.panel__panes {
+  width: 100%;
+  height: calc(100% - 30px);
+}
+
+.panel__logo {
+  text-align: center;
+  position: absolute;
+  bottom: 15px;
+  line-height: 15px;
+  font-size: 8px;
+  font-family: proxima-nova;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+
+.panel__logo--image {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  bottom: 1px;
+  width: 46px;
+  height: 9px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url('http://images.mic.com/imssae54vbpk5hrejovyd8ma9lceqmoqvedcdxkkroghuzcjbzxct9fttufvprss.jpg');
+}
+
+.panel__logo:before {
+  content: 'powered by ';
+}

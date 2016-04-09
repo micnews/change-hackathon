@@ -15,6 +15,12 @@ const platforms = {
     searchOpts: {
       keyword: ''
     }
+  },
+  kickstarter: {
+    name: 'Kickstarter',
+    searchOpts: {
+      keyword: ''
+    }
   }
 };
 let iframeSrc;
