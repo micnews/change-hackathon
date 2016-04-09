@@ -31,6 +31,6 @@ app.get('/', function (req, res) {
 app.use(express.static('dist'));
 
 var portNumber = 8000;
-app.listen(portNumber, function () {
-  console.log('listening on port ' + portNumber);
+app.listen(process.env.PORT || portNumber, function () {
+  console.log('listening on port ' + process.env.PORT || portNumber);
 });
