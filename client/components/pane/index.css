@@ -4,6 +4,8 @@
   border-top: solid 1px #eee;
   padding-top: 15px;
   margin-top: 15px;
+  width: 250px;
+  float: left;
 }
 
 .page__name {

@@ -1,5 +1,3 @@
-'use strict';
-
 import element from 'magic-virtual-element';
 
 module.exports = {

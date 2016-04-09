@@ -9,10 +9,10 @@ var browserify = require('browserify');
 var uglify = require('gulp-uglify');
 var babelify = require('babelify');
 
-var cssSrc = ['client/index.css'];
+var cssSrc = ['client/*.css'];
 var cssWatch = ['client/**/*.css'];
 
-var jsSrc = ['client/index.js'];
+var jsSrc = ['client/*.js'];
 var jsWatch = ['client/**/*.js'];
 
 function processCss () {
