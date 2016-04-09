@@ -34,9 +34,9 @@ module.exports = {
                 </select>
                 {typeof (state[idx]) === 'object' && (
                   <div>
-                    <input placeholder='URL' onInput={handleOnInput(idx, Object.keys(state[idx])[0], 'url')}></input>
+                    <input placeholder='Paste URL' onInput={handleOnInput(idx, Object.keys(state[idx])[0], 'url')}></input>
                     OR
-                    <input placeholder='Automatically generate by keyword' onInput={handleOnInput(idx, Object.keys(state[idx])[0], 'keyword')}></input>
+                    <input placeholder='Search by keywords' onInput={handleOnInput(idx, Object.keys(state[idx])[0], 'keyword')}></input>
                   </div>
                 )}
               </div>
