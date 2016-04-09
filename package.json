@@ -22,7 +22,6 @@
   },
   "homepage": "https://github.com/micnews/change-hackathon#readme",
   "dependencies": {
-    "@mic/webster": "^3.7.3",
     "async": "^1.5.2",
     "deku": "^1.0.0",
     "express": "^4.13.4",
