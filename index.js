@@ -11,6 +11,7 @@ app.get('/build', function (req, res) {
 });
 
 app.get('/', function (req, res) {
+  console.log(req);
   var queryString = req.query;
   if (!queryString) return res.sendStatus(403);
   var toSend = [];
