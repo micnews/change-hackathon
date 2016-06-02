@@ -1,7 +1,7 @@
 {
-  "name": "change-hackathon",
+  "name": "@mic/offsite",
   "version": "1.0.0",
-  "description": "Mic's Change.org hackathon project.",
+  "description": "Mic's GEN hackathon project.",
   "main": "index.js",
   "scripts": {
     "lint": "semistandard | snazzy",
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/micnews/change-hackathon.git"
+    "url": "git+https://github.com/micnews/offsite.git"
   },
   "author": "ryanscottaudio",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/micnews/change-hackathon/issues"
+    "url": "https://github.com/micnews/offsite/issues"
   },
-  "homepage": "https://github.com/micnews/change-hackathon#readme",
+  "homepage": "https://github.com/micnews/offsite#readme",
   "dependencies": {
     "async": "^1.5.2",
     "deku": "^1.0.0",
