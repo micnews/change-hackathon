@@ -23,11 +23,13 @@
   "homepage": "https://github.com/micnews/offsite#readme",
   "dependencies": {
     "async": "^1.5.2",
+    "body": "^5.1.0",
     "deku": "^1.0.0",
     "express": "^4.13.4",
     "handlebars": "^4.0.5",
     "magic-virtual-element": "^1.0.6",
-    "request": "^2.70.0"
+    "request": "^2.70.0",
+    "xhr": "^2.2.0"
   },
   "devDependencies": {
     "@mic/postcss": "^3.1.0",

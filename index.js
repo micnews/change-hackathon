@@ -5,25 +5,36 @@ var app = express();
 var platforms = require('./lib');
 var fs = require('fs');
 var Handlebars = require('handlebars');
+var body = require('body');
 
 app.get('/build', function (req, res) {
   res.send(fs.readFileSync(__dirname + '/templates/builder.html', 'utf8'));
 });
 
 app.get('/', function (req, res) {
-  console.log(req);
   var queryString = req.query;
   if (!queryString) return res.sendStatus(403);
-  var toSend = [];
-  Object.keys(queryString).forEach(function (idx) {
-    const platformData = queryString[idx];
-    const platform = Object.keys(platformData)[0];
-    platforms[platform](queryString[idx][platform], function (err, data) {
-      if (err) return console.log(err);
-      toSend.push(data);
-      if (Object.keys(toSend).length === Object.keys(queryString).length) {
-        res.send(Handlebars.compile(fs.readFileSync(__dirname + '/templates/index.html', 'utf8'))({paneData: JSON.stringify(toSend)}));
-      }
+  res.send(Handlebars.compile(fs.readFileSync(__dirname + '/templates/index.html', 'utf8'))({paneData: JSON.stringify(queryString)}));
+});
+
+app.post('/client-data', function (req, res) {
+  body(req, res, function (err, data) {
+    if (err) return console.log(err);
+    var body = JSON.parse(data);
+    console.log(body);
+    var location = body.location;
+    var queryString = body.paneData;
+    var toSend = [];
+    Object.keys(queryString).forEach(function (idx) {
+      const platformData = queryString[idx];
+      const platform = Object.keys(platformData)[0];
+      platforms[platform](queryString[idx][platform], function (err2, data) {
+        if (err2) return console.log(err2);
+        toSend.push(data);
+        if (Object.keys(toSend).length === Object.keys(queryString).length) {
+          res.json(toSend);
+        }
+      });
     });
   });
 });
