@@ -1,2 +1,2 @@
-# change-hackathon
-Mic's Change.org hackathon project.
+# Offsite
+Mic's GEN hackathon project.
