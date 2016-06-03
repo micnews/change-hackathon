@@ -2,14 +2,13 @@
   font-family: proxima-nova;
   font-weight: 600;
   border-top: solid 3px #00de98;
-  width: calc((100% - 30px) / 3);
-  height: calc(100% - 3px);
-  float: left;
+  width: 186.66667px;
+  height: 257px;
   background: white;
-}
-
-.pane:not(:last-child) {
-  margin-right: 15px;
+  margin: 7.5px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
 }
 
 .pane__command {
