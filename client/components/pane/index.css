@@ -42,7 +42,8 @@
 }
 
 .pane__info {
-  padding: 15px;
+  position: relative;
+  margin: 15px;
 }
 
 .pane__platform {
@@ -76,10 +77,12 @@
 
 .pane__number {
   display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
   font-style: italic;
   font-size: 8px;
   color: #bbb;
-  margin-left: 15px;
 }
 
 .pane__number--petition:after {
