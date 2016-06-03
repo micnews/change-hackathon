@@ -35,8 +35,9 @@
 }
 
 .pane__image {
-  height: 120px;
-  background-size: cover;
+  height: 105px;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center;
 }
 
