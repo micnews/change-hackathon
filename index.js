@@ -21,14 +21,14 @@ app.post('/client-data', function (req, res) {
   body(req, res, function (err, data) {
     if (err) return console.log(err);
     var body = JSON.parse(data);
-    console.log(body);
     var location = body.location;
     var queryString = body.paneData;
     var toSend = [];
     Object.keys(queryString).forEach(function (idx) {
       const platformData = queryString[idx];
       const platform = Object.keys(platformData)[0];
-      platforms[platform](queryString[idx][platform], function (err2, data) {
+      platformData[platform].location = location;
+      platforms[platform](platformData[platform], function (err2, data) {
         if (err2) return console.log(err2);
         toSend.push(data);
         if (Object.keys(toSend).length === Object.keys(queryString).length) {
