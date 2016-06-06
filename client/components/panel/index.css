@@ -5,6 +5,7 @@ body {
 }
 
 .panel {
+  width: 100%;
   max-width: 605px;
   padding: calc(15px / 2);
   background: #F4F4F4;
