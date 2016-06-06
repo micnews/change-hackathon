@@ -2,7 +2,7 @@ import element from 'magic-virtual-element';
 import serialize from '../../utils/serialize';
 
 module.exports = {
-  render: ({ props: { state, platforms, iframeSrc, onChange, onInput, onGenerate } }) => {
+  render: ({ props: { state, generate, platforms, onChange, onInput, onGenerate } }) => {
     const handleOnChange = (idx) => {
       return (e) => {
         onChange(idx, e.target.value);
@@ -16,8 +16,16 @@ module.exports = {
     };
 
     const handleOnGenerate = () => {
-      return onGenerate('//' + window.location.host + '/?' + serialize(state));
+      return onGenerate();
     };
+
+    const url = '//' + window.location.host + '/?' + serialize(state);
+
+    const inlineStyles = 'border-width: 0px !important;min-height: 320px !important;width: 100% !important;';
+
+    const iframeEl = <iframe style={inlineStyles} src={url}/>;
+
+    const iframeString = '<' + iframeEl.type + ' style="' + iframeEl.attributes.style + '" src="' + iframeEl.attributes.src + '"/>';
 
     return (
       <div class='builder'>
@@ -44,9 +52,9 @@ module.exports = {
           })}
         </div>
         Here's your embed code:
-        <input class='final-display' value={'<iframe style="border-width: 0px !important" width="620" height="320" src="//' + window.location.host + '/?' + serialize(state) + '"/>'}/>
+        <input class='final-display' value={iframeString}/>
         <div class='generate-iframe' onClick={handleOnGenerate}>See what it'll look like</div>
-        {iframeSrc && <iframe style='border-width: 0px !important' width='620' height='320' class='sample-iframe' src={iframeSrc}/>}
+        {generate && iframeEl}
       </div>
     );
   }

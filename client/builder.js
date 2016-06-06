@@ -23,7 +23,7 @@ const platforms = {
     }
   }
 };
-let iframeSrc;
+let generate = false;
 
 let app;
 
@@ -43,14 +43,14 @@ const onInput = (idx, platform, type, value) => {
 };
 
 const onGenerate = (url) => {
-  opts.iframeSrc = url;
+  opts.generate = true;
   app.mount(<Builder {...opts}/>);
 };
 
 let opts = {
   state,
   platforms,
-  iframeSrc,
+  generate,
   onChange,
   onInput,
   onGenerate

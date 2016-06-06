@@ -9,9 +9,9 @@ body {
   width: 100%;
   padding: 7.5px;
   background: #f4f4f4;
-  position: relative;
   text-align: center;
   box-sizing: border-box;
+  display: inline-block;
 }
 
 .panel__panes {

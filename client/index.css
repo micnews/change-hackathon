@@ -1,2 +1,6 @@
 @import "./utils/fonts.css";
 @import "./components/panel/index.css";
+
+.main {
+  text-align: center;
+}
