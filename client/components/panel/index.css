@@ -5,12 +5,13 @@ body {
 }
 
 .panel {
+  max-width: 620px;
   width: 100%;
-  max-width: 605px;
-  padding: calc(15px / 2);
-  background: #F4F4F4;
+  padding: 7.5px;
+  background: #f4f4f4;
   position: relative;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .panel__panes {
