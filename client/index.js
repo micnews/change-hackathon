@@ -27,8 +27,10 @@ const clientData = (location) => {
 };
 
 let locationNeeded = false;
-Object.keys(paneData).forEach((pane) => {
-  if (Object.keys(paneData[pane])[0] === 'eventbrite') {
+Object.keys(paneData).forEach((paneIdx) => {
+  var paneName = Object.keys(paneData[paneIdx])[0];
+  var paneUrl = paneData[paneIdx][paneName].url;
+  if (paneName === 'eventbrite' && !paneUrl) {
     locationNeeded = true;
   }
 });
